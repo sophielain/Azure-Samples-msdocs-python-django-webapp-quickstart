@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - ConectaSoftware
+name: Build and deploy Python app to Azure Web App - conectasoftware
 
 on:
   push:
@@ -65,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_E78DFC309654415B8FD69554A3159105 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_CA4F7A7F5EC542D6BC5709C0C49715E2 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_51E2C39983CD46DB9C52038A998E9CBB }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_CF7441890DF44FA09B62423612110639 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_54702B3E8D454C2E83093744F3F38A79 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_96F4472ED011419A83E507340AE1CBE9 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'ConectaSoftware'
+          app-name: 'conectasoftware'
           slot-name: 'Production'
           
